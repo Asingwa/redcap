@@ -1,0 +1,55 @@
+/**
+ * @brief Basic settings for index page
+ *
+ * @file style.css
+ * @version 1.0
+ * $Revision: 99 $
+ * $Author: fmcclurg $
+ * @author Fred R. McClurg, University of Iowa
+ * $Date:: 2012-03-13 14:52:03 #$: Date of last commit
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/css/style.css $
+ */
+ 
+table.plotTable
+{
+   /* width: 100%; */
+   text-align: center;
+   padding: 5;
+}
+
+th.fieldHeader
+{
+   text-align: right;
+   font-weight: bold;
+   white-space: nowrap;
+}
+
+input.buttonClass, button.buttonClass
+{
+   padding: 5px;
+   spacing: 10px;
+   font-weight: bold;
+}
+
+/*
+body
+{
+   font-size: 100%;
+   font-family: verdana,arial,sans-serif;
+}
+*/
+
+/*
+h1
+{
+   text-align: center;
+   font-size: 2.5em;
+}
+*/
+
+/*
+p
+{
+   font-size: 0.875em;
+}
+*/
