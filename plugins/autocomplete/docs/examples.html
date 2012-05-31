@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+      Examples of Auto Complete jQuery Popup Dialogs
+	</title>
+	
+   <!-- @brief Performs autocompletion on an external REDCap project -->
+   <!-- @file  examples.html -->
+   <!-- $Revision: 137 $ -->
+   <!-- $Author: fmcclurg $ -->
+   <!-- $Date:: 2012-05-31 15:56:34 #$ -->
+   <!-- @since 2012-05-14 -->
+   <!-- $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/docs/examples.html $ -->
+
+	<!-- CSS Style Sheets -->
+	<link href="../jquery/css/smoothness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
+	
+	<!-- JavaScript Functions -->
+	<script src="../jquery/js/jquery-1.7.2.min.js" type="text/javascript" type="text/javascript"></script>
+	<script src="../jquery/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
+   
+   <script>
+      $(document).ready(function(){
+         $("div.field").wrap("<fieldset />");
+         $("fieldset").css("background-color", "#F0F8FF");
+      });
+   </script>
+</head>
+
+<body>
+   <h1 style="text-align: center;">
+      Examples of Auto Complete jQuery Popup Dialogs
+   </h1>
+	
+   <h2>jQuery Autocompletion with One Variable </h2>
+   
+   <form>
+      <div class="field">
+         This auto complete dialog allows the user to perform name matching and the selected name is returned to the main form. <p />
+   
+         <input type="text" name="doctor_name" value="doctor_name" /> <br />
+      
+         <div id="doctor_name" style="display: none;"></div>
+      
+         Enter doctor's name or<br />
+         <a href="javascript:void(0)" 
+            title="Doctor List Lookup"
+            onclick="javascript: 
+               $('#doctor_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Doctor%20Name%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_name&pid=38'); ">
+                  auto completion lookup</a>
+      </div>
+               
+      <p />
+      
+      <div class="field">
+         This example does the same as above except it uses an icon to launch the dialog. <p />
+      
+         <input type="text" name="healer_name" value="healer_name" /> <br />
+         
+         <div id="healer_name" style="display: none;"></div>
+         
+         Enter physician's name
+         <a href="javascript:void(0)" 
+            onclick="javascript: 
+               $('#healer_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Physician%20Name%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=healer_name&pid=38'); ">
+               <img src="/redcap/autocomplete/images/ajax.16x16.gif"
+                 title="Physician List Lookup"
+                 border="0" /></a>
+      </div>
+   </form>
+   
+   <p /> <br />
+   
+   <h2>jQuery Autocompletion with Two Variables </h2>
+   
+   <form>
+      <div class="field">
+         This auto complete dialog allows the user to perform name matching and the ID number of the selected name is returned to the main form. <p />
+   
+         <input type="text" name="doctor_id" value="doctor_id" /> <br />
+      
+         <div id="doctor_id" style="display: none;"></div>
+      
+         Enter doctor's ID number or<br />
+         <a href="javascript:void(0)" 
+            title="Doctor List Lookup"
+            onclick="javascript: 
+               $('#doctor_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Doctor%20Name%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_id&pid=38'); ">
+                  auto completion lookup</a>
+      </div>
+               
+      <p />
+      
+      <div class="field">
+         This example does the same as above except it uses an icon to launch the dialog. <p />
+      
+         <input type="text" name="physician_id" value="physician_id" /> <br />
+      
+         <div id="physician_id" style="display: none;"></div>
+      
+         Enter physician's ID number
+         <a href="javascript:void(0)" 
+            onclick="javascript: 
+               $('#physician_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Physician%20Name%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=physician_id&pid=38'); ">
+               <img src="/redcap/autocomplete/images/star.18x18.gif"
+                    title="Physician List Lookup"
+                    border="0" /></a>
+      </div>
+   </form>
+   
+</body>
+</html>
