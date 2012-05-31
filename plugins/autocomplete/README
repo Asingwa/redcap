@@ -1,6 +1,7 @@
 Title:         REDCap autocomplete plugin
-Description:   A REDCap plugin that offers general purpose, auto completion capabilities for 
-               selecting fields that have too many items to make it practical for a drop-down list.
+Description:   A REDCap plugin that offers general purpose, auto completion 
+               capabilities for selecting fields that have too many items to 
+               make it practical for a drop-down list.
 Documentation: https://www.icts.uiowa.edu/confluence/display/ICTSit/REDCap+Autocomplete+Plugin
 Examples:      docs/examples.html
 Location:      University of Iowa
