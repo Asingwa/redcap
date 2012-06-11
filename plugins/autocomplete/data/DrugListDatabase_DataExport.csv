@@ -1,0 +1,201 @@
+"drug_id"	"brand"	"generic"	"function"	"list_complete"
+"1"	"Vicodin"	"APAP + Hydrocodone"	"Pain Relief (DEA Sch 3)"	2
+"2"	"Prinivil"	"Lisinopril"	"ACE inhibitor"	2
+"3"	"Zocor"	"Simvastatin"	"Statin"	2
+"4"	"Synthroid"	"Levothyroxine"	"Hormone Replacement"	2
+"5"	"Amoxil"	"Amoxicillin"	"Antibiotic (Penicillin)"	2
+"6"	"Zithromax"	"Azithromycin"	"Macrolide Antibiotic"	2
+"7"	"Microzide"	"Hydro- chlorothiazide (HCTZ)"	"Thiazide Diuretic"	2
+"8"	"Norvasc"	"Amlodipine"	"Calcium ChannelBlocker"	2
+"9"	"Xanax"	"Alprazolam"	"Benzodiazepine (DEA Sch 4)"	2
+"10"	"Glucophage"	"Metformin"	"Antidiabetic"	2
+"11"	"Lipitor"	"Atorvastatin"	"Statin"	2
+"12"	"Prilosec"	"Omeprazole"	"Proton PumpInhibitor"	2
+"13"	"Augmentin"	"Amoxicillin + Clavulanate"	"Penicillin Antibiotic"	2
+"14"	"Tenormin"	"Atenolol"	"Beta Blocker (B1)"	2
+"15"	"Lasix"	"Furosemide"	"Diuretic"	2
+"16"	"Lopressor"	"metoprolol"	"Beta Receptor Blocker (B1)"	2
+"17"	"Zoloft"	"Sertraline"	"S.S.R.I."	2
+"18"	"Ambien"	"Zolpidem"	"Sleep Aid (DEA Sch 4)"	2
+"19"	"Percocet"	"Oxycodone + APAP"	"Pain Relief (DEA Sch 2)"	2
+"20"	"Nexium"	"Esomeprazole"	"Proton PumpInhibitor"	2
+"21"	"Plavix"	"Clopidogrel"	"Platelet Aggregation Inhibitor"	2
+"22"	"Singulair"	"Montelukast"	"Leukotriene Inhibitor"	2
+"23"	"Sterapred"	"Prednisone"	"Corticosteroid"	2
+"24"	"Lexapro"	"Escitalopram"	"S.S.R.I"	2
+"25"	"Advil"	"Ibuprofen"	"N.S.A.I.D"	2
+"26"	"Celexa"	"Citalopram"	"Anti-Depressant (S.S.R.I.)"	2
+"27"	"ProAir"	"Albuterol"	"B2 Receptor Agonist(Lungs)"	2
+"28"	"Prozac"	"Fluoxetine"	"S.S.R.I."	2
+"29"	"Neurontin"	"Gabapentin"	"Anti-Convulsant"	2
+"30"	"Coumadin"	"Warfarin"	"Blood Thinner"	2
+"31"	"Ultram"	"Tramadol"	"Pain Relief (Non-Narcotic)"	2
+"32"	"Klonopin"	"Clonazepam"	"Benzodiazepine (DEA Sch 4)"	2
+"33"	"Ativan"	"Lorazepam"	"Benzodiazepine (DEA Sch 4)"	2
+"34"	"Keflex"	"Cephalexin"	"Antibiotic (Cephalosporin)"	2
+"35"	"Flexeril"	"Cyclobenzaprine"	"Muscle Relaxant"	2
+"36"	"Septra"	"Sulfamethoxazole + Trimethoprim"	"Antibiotic Combination"	2
+"37"	"Cipro"	"Ciprofloxacin"	"Quinolone Antibiotic"	2
+"38"	"Flonase"	"Fluticasone"	"Inhaled Steroid"	2
+"39"	"Dyrenium"	"Triamterene"	"Diuretic"	2
+"40"	"Pravachol"	"Pravastatin"	"Cholesterol / Statin"	2
+"41"	"Crestor"	"Rosuvastatin"	"Statin"	2
+"42"	"Advair"	"Fluticasone + Salmeterol"	"Bronchodilator + Steroid"	2
+"43"	"Desyrel"	"Trazodone"	"Anti-Depressant"	2
+"44"	"Darvocet"	"Propoxyphene + APAP"	"Pain Relief (DEA Sch 4)"	2
+"45"	"Fosamax"	"alendronate"	"Bone Resorption Inhibitor"	2
+"46"	"Allegra"	"Fexofenadine"	"Antihistamine (H1)"	2
+"47"	"Mevacor"	"Lovastatin"	"Cholesterol / Statin"	2
+"48"	"Coreg"	"Carvedilol"	"Beta Receptor Blocker"	2
+"49"	"Paxil"	"Paroxetine"	"S.S.R.I."	2
+"50"	"Mobic"	"Meloxicam"	"N.S.A.I.D."	2
+"51"	"Valium"	"Diazepam"	"Benzodiazepine (DEA Sch 4)"	2
+"52"	"Diovan"	"Valsartan"	"Angiotensin II Receptor Blocker (A2RB)"	2
+"53"	"Cymbalta"	"Duloxetine"	"Anti-Depressant"	2
+"54"	"Effexor"	"Venlafaxine"	"Anti-Depressant"	2
+"55"	"Zantac"	"Ranitidine"	"Histamine Blocker (H2)"	2
+"56"	"Diflucan"	"Fluconazole"	"Anti-Fungal"	2
+"57"	"Aleve"	"Naproxen"	"N.S.A.I.D"	2
+"58"	"Vibramycin"	"Doxycycline"	"Antibiotic (Tetracycline)"	2
+"59"	"Klor-Con"	"Potassium Chloride"	"Electrolyte"	2
+"60"	"Elavil"	"Amitriptyline"	"Anti-Depressant"	2
+"61"	"Prevacid"	"Lansoprazole"	"Proton PumpInhibitor"	2
+"62"	"Actos"	"Pioglitazone"	"Anti-Diabetic"	2
+"63"	"Medrol"	"Methyl- prednisolone"	"Steroid Anti- Inflammatory"	2
+"64"	"Zyloprim"	"Allopurinol"	"Xanthine Oxidase Inhibitor"	2
+"65"	"Tylenol 3"	"Codeine + APAP"	"Pain Relief (DEA Sch 3)"	2
+"66"	"Vasotec"	"Enalapril"	"ACE Inhibitor"	2
+"67"	"Soma"	"Carisoprodol"	"Muscle Relaxant (DEA Sch 4)"	2
+"68"	"Flomax"	"Tamsulosin"	"Prostate Receptor Agonist"	2
+"69"	"Vytorin"	"Ezetimibe + Simvastatin"	"Cholesterol"	2
+"70"	"Seroquel"	"Quetiapine"	"Anti-psychotic"	2
+"71"	"Levaquin"	"Levofloxacin"	"Antibiotic (Quinolone)"	2
+"72"	"Tricor"	"Fenofibrate"	"Cholesterol"	2
+"73"	"Catapres"	"Clonidine"	"Alpha Receptor Agonist"	2
+"74"	"Phenergan"	"Promethazine"	"Anti-Nausea / Anti-emetic"	2
+"75"	"Yaz"	"Ethinyl estradiol + Drospirenone"	"Birth Control"	2
+"76"	"Viagra"	"Sildenafil"	"Erectile Dysfunction"	2
+"77"	"Celebrex"	"Celecoxib"	"N.S.A.I.D. COX-2 inhibitor"	2
+"78"	"Proventil"	"Albuterol"	"Beta Agonist (B2)(Lungs)"	2
+"79"	"Oxycontin"	"Oxycodone"	"Pain Relief (DEA Sch 2)"	2
+"80"	"Lantus"	"Insulin Glargine"	"Insulin"	2
+"81"	"Nasonex"	"Mometasone"	"Corticosteroid"	2
+"82"	"Lyrica"	"Pregabalin"	"Anti-convulsant / Neurologic (DEA Sch 5)"	2
+"83"	"Amaryl"	"Glimepiride"	"Antidiabetic"	2
+"84"	"Restoril"	"Temazepam"	"Sleep Aid (DEA Sch 4)"	2
+"85"	"Folvite"	"Folic Acid"	"Mineral Supp."	2
+"86"	"Premarin"	"Conjugated Estrogen"	"Estrogen Replacement"	2
+"87"	"Zetia"	"Ezetimibe"	"Colesterol"	2
+"88"	"Aldactone"	"Spironolactone"	"Diuretic"	2
+"89"	"Lanoxin"	"Digoxin"	"Inotrope"	2
+"90"	"Imdur"	"Isosorbide Mononitrate"	"Nitrate Vasodilator"	2
+"91"	"Omnicef"	"Cefdinir"	"Anti-biotic (Cephalosporin)"	2
+"92"	"Altace"	"Ramipril"	"ACE Inhibitor"	2
+"93"	"Nasacort"	"Triamcinolone"	"Inhaled Steroid"	2
+"94"	"Ventolin"	"Albuterol"	"Bronchodilator"	2
+"95"	"Cozaar"	"Losartan"	"A2RB"	2
+"96"	"Concerta"	"Methylphenidate"	"ADHD (DEA Sch 2)"	2
+"97"	"DiaBeta"	"Glyburide"	"Anti-Diabetic"	2
+"98"	"Valtrex"	"Valacyclovir"	"Anti-Viral"	2
+"99"	"Tamiflu"	"Oseltamivir"	"Anti-Viral (Flu)"	2
+"100"	"Pen-VK"	"Penicillin vk"	"Antibiotic"	2
+"101"	"Spiriva"	"Tiotropium"	"Anti-cholinergic"	2
+"102"	"Lotensin"	"Benazepril"	"ACE Inhibitor"	2
+"103"	"Lamictal"	"Lamotrigine"	"Anti-convulsant"	2
+"104"	"Benicar HCT"	"Olmesartan + HCTZ"	"A2RB + Diuretic"	2
+"105"	"Aricept"	"Donepezil"	"Cholinesterase Inhibitor"	2
+"106"	"Risperdal"	"Risperidone"	"Anti-Psychotic"	2
+"107"	"Glucotrol"	"Glipizide"	"Anti-Diabetic"	2
+"108"	"Adderall"	"Amphetamine +Dextro- amphetamine"	"Stimulant(ADHD) (DEA Sch 2)"	2
+"109"	"Abilify"	"Aripiprazole"	"Anti-psychotic"	2
+"110"	"Verelan"	"Verapamil"	"Calcium Channel Blocker"	2
+"111"	"Cleocin"	"Clindamycin"	"Anti-Microbial"	2
+"112"	"Flagyl"	"Metronidazole"	"Anti-Microbial"	2
+"113"	"Ortho Tri- Cyclen"	"Ethinyl Estradiol +Norgestimate"	"Birth Control"	2
+"114"	"Cialis"	"Tadalafil"	"Erectile Dysfunction"	2
+"115"	"Adipex"	"Phentermine"	"Appetite Suppressant (DEA Sch 4)"	2
+"116"	"Levoxyl"	"Levothyroxine"	"Hormone Replacement (Thyroid)"	2
+"117"	"Vistaril"	"Hydroxyzine"	"Anti-Histamine"	2
+"118"	"Cataflam"	"Diclofenac"	"N.S.A.I.D."	2
+"119"	"Reglan"	"Metoclopramide"	"GI Motility Stimulant"	2
+"120"	"Lopid"	"Gemfibrozil"	"Cholesterol"	2
+"121"	"Cardizem"	"Diltiazem"	"Calcium Channel Blocker"	2
+"122"	"Depakote"	"Divalproex"	"Anti-Convulsant"	2
+"123"	"Furadantin"	"Nitrofurantoin"	"Anti-Microbial"	2
+"124"	"Remeron"	"Mirtazapine"	"Anti-Depressant"	2
+"125"	"Xalatan"	"Latanoprost (Opthalmic)"	"Prostaglandin"	2
+"126"	"Januvia"	"Sitagliptin"	"Anti-Diabetic"	2
+"127"	"Zovirax"	"Acyclovir"	"Anti-Viral"	2
+"128"	"Cardura"	"Doxazosin"	"Alpha Receptor Agonist"	2
+"129"	"Lunesta"	"Eszopiclone"	"Sleep Aid (DEA Sch 4)"	2
+"130"	"Niaspan"	"Niacin"	"Cholesterol"	2
+"131"	"Inderal"	"Propranolol"	"Beta Receptor Blocker(B1)"	2
+"132"	"Hyzaar"	"Losartan + HCTZ"	"A2RB + Diuretic"	2
+"133"	"Suboxone"	"Buprenorphine"	"Opioid Recovery (DEA Sch3)"	2
+"134"	"Budeprion"	"Bupropion"	"Anti-Depressant"	2
+"135"	"Robitussin"	"Guaifenesin"	"Cold Syrup"	2
+"136"	"Topamax"	"Topiramate"	"Anti-convulsant"	2
+"137"	"BuSpar"	"Buspirone"	"Anxiolytic / Hypnotic"	2
+"138"	"Anti-Vert"	"Meclizine"	"Anti-Vertigo"	2
+"139"	"Detrol"	"Tolterodine"	"Urinary Anti-spasmotic"	2
+"140"	"Vyvanse"	"Lisdexamfetamine"	"ADHD (DEA Sch II)"	2
+"141"	"Accupril"	"Quinapril"	"ACE Inhibitor"	2
+"142"	"Aciphex"	"Rabeprazole"	"Proton Pump Inhibitor"	2
+"143"	"Bactroban"	"Mupirocin"	"Topical Anti-Bacterial"	2
+"144"	"Rheumatrex"	"Methotrexate"	"Anti-Rheumatic"	2
+"145"	"Glycolax"	"Polyethylene Glycol"	"Laxative"	2
+"146"	"Duragesic"	"Fentanyl (Transdermal)"	"Pain Relief (DEA Sch 2)"	2
+"147"	"Tessalon Perles"	"Benzonatate"	"Cough Supressant"	2
+"148"	"Avapro"	"Irbesartan"	"A2RB"	2
+"149"	"Combivent"	"Albuterol + Ipratropium Inhaler"	"Bronchodilator"	2
+"150"	"Boniva"	"Ibandronate"	"Biphosphonate (bone loss)"	2
+"151"	"Methadose"	"Methadone"	"Opioid Dependence (DEA Sch 2)"	2
+"152"	"Lotrisone"	"Clotrimazole + Betamethasone"	"Anti-Fungal + Steroid"	2
+"153"	"Imitrex"	"Sumatriptan"	"Seratonin Agonist"	2
+"154"	"Procardia"	"Nifedipine"	"Calcium Channel Blocker"	2
+"155"	"Pepcid"	"Famotidine"	"Histamine Blocker"	2
+"156"	"Fioricet"	"Butalbital + APAP+ Caff"	"Headache"	2
+"157"	"Proscar"	"Finasteride"	"Enzyme Inhibitor (Prostate)"	2
+"158"	"Feosol"	"Ferrous Sulfate"	"Iron Deficiency"	2
+"159"	"Hytrin"	"Terazosin"	"Alpha Receptor Agonist"	2
+"160"	"Lovaza"	"Omega-3 /Fish Oil"	"Cholestorol"	2
+"161"	"Zanaflex"	"Tizanidine"	"Mult. Sclerosis"	2
+"162"	"Actonel"	"Risedronate"	"Bone Resorption Inhibitor"	2
+"163"	"Namenda"	"Memantine"	"Anti-Alzheimer"	2
+"164"	"NovoLog"	"Insulin Aspart"	"Insulin Type I Diabetes"	2
+"165"	"Robaxin"	"Methocarbamol"	"Muscle Relaxer"	2
+"166"	"Temovate"	"Clobetasol"	"Corticosteroid"	2
+"167"	"Zebeta"	"Bisoprolol"	"Beta Blocker"	2
+"168"	"NitroStat"	"Nitroglycerine"	"Vasodilator"	2
+"169"	"Chantix"	"Varenicline"	"Smoking Cessation"	2
+"170"	"Evista"	"Raloxifene"	"Estrogen Modulator"	2
+"171"	"Peridex"	"Chlorhexidine Gluconate"	"Anti-Microbial Oral Rinse"	2
+"172"	"Zyprexa"	"Olanzapine"	"Anti-Psychotic"	2
+"173"	"Zofran"	"Ondansetron"	"Anti-nausea"	2
+"174"	"Requip"	"Ropinirole"	"Parkinsons"	2
+"175"	"Bentyl"	"Dicyclomine"	"Anti-Spasmotic"	2
+"176"	"Humalog"	"Insulin Lispro"	"Insulin Type I Diabetes"	2
+"177"	"Relafen"	"Nabumetone"	"N.S.A.I.D."	2
+"178"	"Avalide"	"Irbesartan + HCTZ"	"A2RB + Diuretic"	2
+"179"	"Biaxin"	"Clarithromycin"	"Macrolide Antibiotic"	2
+"180"	"Lidoderm"	"Lidocaine Patch"	"Topical Anesthetic"	2
+"181"	"Avodart"	"Dutasteride"	"Prostate"	2
+"182"	"Dilantin"	"Phenytoin"	"Anti-Convulsant"	2
+"183"	"Colchicine"	"Colchicine"	"Anti-Gout"	2
+"184"	"Vigamox"	"Moxifloxacin"	"Antibiotic (Quinolone)"	2
+"185"	"Lioresal"	"Baclofen"	"Muscle Relaxer"	2
+"186"	"Plaquenil"	"Hydroxychloroquine"	"Arthritis / Lupus"	2
+"187"	"Tussionex"	"Chlorpheniramine + Hydrocodone"	"Narc+Anti-Hist (DEA Sch III)"	2
+"188"	"Pyridium"	"Phenazopyridine"	"Analgesic (urinary)"	2
+"189"	"Strattera"	"Atomoxetine"	"Norephinephrine Reuptake Inhibitor (ADHD)"	2
+"190"	"Levitra"	"Vardenafil"	"Erectile Dysfunction"	2
+"191"	"Nizoral"	"Ketoconazole"	"Anti-fungal"	2
+"192"	"Pamelor"	"Nortriptyline"	"Anti-Depressant"	2
+"193"	"Benztropine"	"Benzatropine"	"Parkinsons"	2
+"194"	"Minocin"	"Minocycline"	"Anti-biotic"	2
+"195"	"Avelox"	"Moxifloxacin"	"Antibiotic (Quinolone)"	2
+"196"	"Protonix"	"Pantoprazole"	"Proton Pump Inhibitor"	2
+"197"	"Ceftin"	"Cefuroxime Axetil"	"Anti-biotic"	2
+"198"	"Ditropan"	"Oxybutynin"	"Overactive Bladder"	2
+"199"	"Keppra"	"Levetiracetam"	"Anti-convulsant"	2
+"200"	"Apresoline"	"Hydralazine"	"Anti-hypertensive"	2

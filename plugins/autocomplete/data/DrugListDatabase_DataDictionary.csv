@@ -1,0 +1,5 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)"
+drug_id,list,,text,"Drug ID",,,integer,0,,,,,,
+brand,list,,text,"Brand Name",,,,,,,,,,
+generic,list,,text,"Generic Name",,,,,,,,,,
+function,list,,text,"Drug Function",,,,,,,,,,
