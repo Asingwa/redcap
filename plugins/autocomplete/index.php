@@ -3,9 +3,9 @@
     * @brief Performs autocompletion on an external REDCap project
     *
     * @file  jQueryDialogAutoComplete.php
-    * $Revision: 147 $
+    * $Revision: 155 $
     * $Author: fmcclurg $
-    * $Date:: 2012-06-21 11:38:33 #$
+    * $Date:: 2012-07-03 16:35:06 #$
     * @since 2012-05-14
     * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/index.php $
     */
@@ -33,15 +33,15 @@
 ?>
 
    <!-- CSS Style Sheets -->
-   <link href="<?= $dirName ?>/jquery/css/smoothness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
+   <link href="<?php echo $dirName ?>/jquery/css/smoothness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
 
    <style>
-      .ui-autocomplete-loading { background: white url('<?= $dirName ?>/jquery/development-bundle/demos/autocomplete/images/ui-anim_basic_16x16.gif') right center no-repeat; }
+      .ui-autocomplete-loading { background: white url('<?php echo $dirName ?>/jquery/development-bundle/demos/autocomplete/images/ui-anim_basic_16x16.gif') right center no-repeat; }
    </style>
 
    <!-- JavaScript Functions -->
-   <script src="<?= $dirName ?>/jquery/js/jquery-1.7.2.min.js" type="text/javascript" type="text/javascript"></script>
-   <script src="<?= $dirName ?>/jquery/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
+   <script src="<?php echo $dirName ?>/jquery/js/jquery-1.7.2.min.js" type="text/javascript" type="text/javascript"></script>
+   <script src="<?php echo $dirName ?>/jquery/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
 
 <?php
    $pfield = $_REQUEST['pfield'];
@@ -54,32 +54,32 @@
 ?>
 
    <script type="text/javascript">
-      var title = $('#<?= $pfield ?>').attr('title');
-      var text = $('#<?= $pfield ?>').html();
+      var title = $('#<?php echo $pfield ?>').attr('title');
+      var text = $('#<?php echo $pfield ?>').html();
       $(function() {
-         $( "#<?= $pfield ?>" ).dialog({
+         $( "#<?php echo $pfield ?>" ).dialog({
             modal: true,
-            title: "<?= $title ?>",
+            title: "<?php echo $title ?>",
             // autoOpen: false,
             buttons: {
                Ok: function() {
-                     $( "input[name='<?= $pfield ?>']" ).val( $( "#<?= $pfield ?>_auto" ).val() );
+                     $( "input[name='<?php echo $pfield ?>']" ).val( $( "#<?php echo $pfield ?>_auto" ).val() );
                      $( this ).dialog( "close" );
                }
             }
          });
 
-         $( "#<?= $pfield ?>_auto" ).autocomplete({
-            source: "<?= $searchScript ?>",
+         $( "#<?php echo $pfield ?>_auto" ).autocomplete({
+            source: "<?php echo $searchScript ?>",
             select: function( event, ui ) {
-               // $( "input[name='<?= $pfield ?>']" ).val( ui.item.value );  // auto value insertion upon item selection
+               // $( "input[name='<?php echo $pfield ?>']" ).val( ui.item.value );  // auto value insertion upon item selection
                $( this ).dialog( "close" );  // auto close upon item selection (does not work)
             }
          });
       });
    </script>
 
-   <?= $body ?>
+   <?php echo $body ?>
    <form>
-      <input type="text" id="<?= $pfield ?>_auto" />
+      <input type="text" id="<?php echo $pfield ?>_auto" />
    </form>

@@ -7,9 +7,9 @@
 	
    <!-- @brief Performs autocompletion on an external REDCap project -->
    <!-- @file  examples.html -->
-   <!-- $Revision: 144 $ -->
+   <!-- $Revision: 155 $ -->
    <!-- $Author: fmcclurg $ -->
-   <!-- $Date:: 2012-06-11 11:41:30 #$ -->
+   <!-- $Date:: 2012-07-03 16:35:06 #$ -->
    <!-- @since 2012-05-14 -->
    <!-- $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/docs/examples.html $ -->
 
@@ -24,7 +24,6 @@
       $(document).ready(function(){
          $("div.field").wrap("<fieldset class='field' />");
          $("fieldset.field").css("background-color", "#F0F8FF");
-         
          $("div.code").wrap("<fieldset class='code' />");
          $("fieldset.code").css("background-color", "#FFFBEF")
             .prepend("<legend style='background-color: #FFFBEF; padding: 7px; font-weight: bold; font-size: small;'>Example Code for REDCap Field Note</legend>");
@@ -37,28 +36,42 @@
       REDCap Autocomplete Plugin Examples
    </h1>
 	
-   <p> Using the REDCap Autocomplete Plugin, you can narrow the item selection of a list.
-       As you type, the list is filtered to display only those items that match.  You
-       can then select one of the items from the list and return that value to the form. </p>
+   <p> Using the REDCap Autocomplete Plugin, you can narrow the item selection of a list.&nbsp;
+       As you type, the list is filtered to display only those items that match the entered 
+       string.&nbsp;  You can then select one of the items from the list and return that value 
+       to the form. </p>
    
    <p /> <br />
    
    <h2>Instructions</h2>
    
    <p> Note: The following examples are intended to serve as a template so you don't have to 
-       start from scratch.  They will probably not work "as-is".  In order to get these examples 
-       to work, you <strong><em>must</em></strong>: </p>
+       start from scratch.&nbsp; They will probably not work "as-is".&nbsp; In order to get 
+       these examples (or this plugin) to function, you <strong><em>must</em></strong>: </p>
        
    <ol>
-      <li> Already have installed the REDCap Autocomplete Plugin code in the document root of 
-           your REDCap server. <p />
+      <li> Install the "redcap_connect.php" file in your REDCap document root.&nbsp; For more 
+           information concerning this file and REDCap plugins in general, see Vanderbilt's 
+           <a href="https://iwg.devguard.com/trac/redcap/wiki/Plugins" target="_blank">REDCap 
+           Plugins Documentation</a>. <p />
+           
+      <li> Install the REDCap Autocomplete Plugin code in a sub-directory of the document root 
+           on your REDCap server.&nbsp; All pathnames to the "redcap_connect.php" file should 
+           reference the location to where this file is installed.&nbsp; For example, if this 
+           plugin were installed in a sub-directory within a plugins directory, the parameter
+           to the "require_once" code function inside the files "index.php" and "searchDatabase.php", 
+           may need to be changed to the following: <p />
+      
+           <dl>
+              <dd> <code>require_once( "../../redcap_connect.php" );</code> <p />
+           </dl>
            
       <li> Be logged into a REDCap project or have an active session running before using the 
            plugin. <p />
            
-      <li> Already have created a stand-alone REDCap Project that will serve to store the
-           autocompletion item matches.  See the <a href="#ddde">Example Data Dictionary and 
-           Data Export</a> section below. <p />
+      <li> Create a stand-alone REDCap Project that will serve to store all the possible 
+           autocompletion items.&nbsp;  To create a project for testing, see the 
+           <a href="#ddde">Example Data Dictionary and Data Export</a> section below. <p />
            
       <li> Modify the examples below to match the field variable names and project ids of
            your installation as specified in 
@@ -66,7 +79,16 @@
               target="_blank">
            REDCap Autocomplete Plugin documentation</a>. <p />
            
-      <li> Note: Your code <strong><em>must not</em></strong> contain duplicate &lt;div&gt; id's! <p />
+      <li> The Autocomplete plugin was intended to be launched from the Field Note of a Textbox 
+           Field Type and the examples on this page were written to handle this use case.&nbsp; 
+           The examples shown are formatted with additional space indentation and blank lines only 
+           to provide clarity to the code.&nbsp; The Field Note ignores all newlines in the code.<p />
+           
+           If you wish, however, to launch the Autocomplete Plugin from a Field Label, all newlines 
+           should be removed prior to the code insertion.&nbsp; This will prevent REDCap from 
+           automatically inserting &lt;br&gt tags inside of the REDCap script. <p />
+           
+      <li> Your code <strong><em>must not</em></strong> contain duplicate &lt;div&gt; id's. <p />
    </ol>
    
    <p /> <br />
@@ -76,7 +98,7 @@
    <form>
       <div class="field">
          The Autocomplete Plugin allows the user to perform matching on
-         list items of data that are coming from another REDCap project.  The selected
+         list items of data that are coming from another REDCap project.&nbsp;  The selected
          item is the name returned to the REDCap project form. <p />
    
          <input type="text" 
@@ -88,8 +110,7 @@
          Enter doctor's name or<br />
          <a href="javascript:void(0)" 
             title="Doctor Name Match"
-            onclick="javascript: 
-               $('#doctor_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Doctor%20Name%20Match&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_name&pid=38'); ">
+            onclick="javascript:$('#doctor_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Doctor%20Name%20Match&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_name&pid=38'); ">
                   autocompletion match</a>
       
          <p />
@@ -100,8 +121,7 @@
 Enter doctor's name or<br />
 <a href="javascript:void(0)" 
    title="Doctor Name Match"
-   onclick="javascript: 
-      $('#doctor_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Doctor%20Name%20Match&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_name&pid=38'); ">
+   onclick="javascript:$('#doctor_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Doctor%20Name%20Match&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_name&pid=38'); ">
          autocompletion match</a></xmp>
          </div>
          
@@ -120,8 +140,7 @@ Enter doctor's name or<br />
          
          Enter physician's name
          <a href="javascript:void(0)" 
-            onclick="javascript: 
-               $('#healer_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Physician%20Name%20Match&body=Enter%20Physician%27s%20Name&dbid=42&pfield=healer_name&pid=38'); ">
+            onclick="javascript:$('#healer_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Physician%20Name%20Match&body=Enter%20Physician%27s%20Name&dbid=42&pfield=healer_name&pid=38'); ">
                <img src="/redcap/autocomplete/images/ajax.16x16.gif"
                  title="Physician Name Match"
                  border="0" /></a>
@@ -133,8 +152,7 @@ Enter doctor's name or<br />
 
 Enter physician's name
 <a href="javascript:void(0)" 
-   onclick="javascript: 
-      $('#healer_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Physician%20Name%20Match&body=Enter%20Physician%27s%20Name&dbid=42&pfield=healer_name&pid=38'); ">
+   onclick="javascript:$('#healer_name').load('/redcap/autocomplete/index.php?dbfield=physician_name&title=Physician%20Name%20Match&body=Enter%20Physician%27s%20Name&dbid=42&pfield=healer_name&pid=38'); ">
       <img src="/redcap/autocomplete/images/ajax.16x16.gif"
         title="Physician Name Match"
         border="0" /></a></xmp>
@@ -152,7 +170,7 @@ Enter physician's name
       <div class="field">
          The Autocomplete Plugin allows the user to perform matching on one database field 
          (e.g. physician_name) and when the user selects a list item, the value that is returned 
-         to the REDCap project field is a different database field (e.g. study_id).  When the 
+         to the REDCap project field is a different database field (e.g. study_id).&nbsp;  When the 
          user selects a name from the autocompletion list, the ID number associated with that 
          name is returned to the REDCap project form. <p />
    
@@ -163,8 +181,7 @@ Enter physician's name
          Enter doctor's ID number or<br />
          <a href="javascript:void(0)" 
             title="Doctor List Lookup"
-            onclick="javascript: 
-               $('#doctor_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Doctor%20List%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_id&pid=38'); ">
+            onclick="javascript:$('#doctor_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Doctor%20List%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_id&pid=38'); ">
                   autocompletion lookup</a>
       
          <p />
@@ -175,8 +192,7 @@ Enter physician's name
 Enter doctor's ID number or<br />
 <a href="javascript:void(0)" 
    title="Doctor List Lookup"
-   onclick="javascript: 
-      $('#doctor_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Doctor%20List%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_id&pid=38'); ">
+   onclick="javascript:$('#doctor_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Doctor%20List%20Lookup&body=Enter%20Doctor%27s%20Name&dbid=42&pfield=doctor_id&pid=38'); ">
             autocompletion lookup</a></xmp>
          </div>
             
@@ -193,8 +209,7 @@ Enter doctor's ID number or<br />
       
          Enter physician's ID number
          <a href="javascript:void(0)" 
-            onclick="javascript: 
-               $('#physician_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Physician%20List%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=physician_id&pid=38'); ">
+            onclick="javascript:$('#physician_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Physician%20List%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=physician_id&pid=38'); ">
                <img src="/redcap/autocomplete/images/star.18x18.gif"
                     title="Physician List Lookup"
                     border="0" /></a>
@@ -206,8 +221,7 @@ Enter doctor's ID number or<br />
 
 Enter physician's ID number
 <a href="javascript:void(0)" 
-   onclick="javascript: 
-      $('#physician_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Physician%20List%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=physician_id&pid=38'); ">
+   onclick="javascript:$('#physician_id').load('/redcap/autocomplete/index.php?dbfield=study_id&dblabel=physician_name&title=Physician%20List%20Lookup&body=Enter%20Physician%27s%20Name&dbid=42&pfield=physician_id&pid=38'); ">
             <img src="/redcap/autocomplete/images/star.18x18.gif"
                  title="Physician List Lookup"
                  border="0" /></a></xmp>
@@ -223,7 +237,7 @@ Enter physician's ID number
    </a>
    
    <p> The following table lists several Data Dictionaries and Exported Data that could easily be imported into an 
-       empty REDCap project.  You are welcome to use these for testing.  They are provided here for your convenience. </p>
+       empty REDCap project.&nbsp;  You are welcome to use these for testing.&nbsp;  They are provided here for your convenience. </p>
    
    <table border="1"
           cellpadding="7"
