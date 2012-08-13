@@ -3,10 +3,10 @@
     * @brief Wizard page that builds the custom autocomplete plugin code
     *
     * @file wizard.php
-    * $Revision: 162 $
+    * $Revision: 164 $
     * $Author: fmcclurg $
-    * $Date:: 2012-08-13 11:09:58 #$: Date of commit
-    * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/wizard.php $
+    * $Date:: 2012-08-13 13:41:05 #$: Date of commit
+    * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/wizard.php $
     */
 
    // Call the REDCap Connect file in the main "redcap" directory
@@ -91,7 +91,7 @@
 
    <p /> <br />
 
-   <form action="<? echo $_SERVER['PHP_SELF'] ?>"
+   <form action="<?php echo $_SERVER['PHP_SELF'] ?>"
          method="get" name="wizard">
 
    <table class="dt2" style="font-family:Verdana;font-size:11px;">
@@ -528,7 +528,7 @@
             Example:
          </td>
          <td>
-            <? echo $htmlStr ?>
+            <?php echo $htmlStr ?>
          </td>
       </tr>
 
@@ -540,7 +540,7 @@
             <textarea name="body"
                       cols="120"
                       rows="10"
-                      readonly="readonly"><? echo $htmlStr ?></textarea>
+                      readonly="readonly"><?php echo $htmlStr ?></textarea>
          </td>
       </tr>
       </tbody>

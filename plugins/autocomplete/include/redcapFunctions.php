@@ -8,7 +8,7 @@
  * $Author: fmcclurg $
  * @author Fred R. McClurg, University of Iowa
  * $Date:: 2012-07-26 16:31:41 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/include/redcapFunctions.php $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/include/redcapFunctions.php $
  */
 
 // set standard error reporting

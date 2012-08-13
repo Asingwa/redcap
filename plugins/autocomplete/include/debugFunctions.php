@@ -7,7 +7,7 @@
  * $Author: fmcclurg $
  * $Date:: 2012-05-25 16:11:25 #$
  * @since 2011-12-27
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/include/debugFunctions.php $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/include/debugFunctions.php $
  */
 
 	// standard error reporting

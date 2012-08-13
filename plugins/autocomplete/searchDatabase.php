@@ -6,7 +6,7 @@
 	 * $Revision: 159 $
 	 * $Author: fmcclurg $
 	 * $Date:: 2012-07-26 16:31:41 #$: Date of commit
-	 * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/searchDatabase.php $
+	 * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/searchDatabase.php $
 	 */
 
 	// Call the REDCap Connect file in the main "redcap" directory
