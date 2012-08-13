@@ -3,10 +3,10 @@
 	 * @brief Extracts the data from a REDCap database in JSON format
 	 *
 	 * @file searchDatabase.php
-	 * $Revision: 131 $
+	 * $Revision: 159 $
 	 * $Author: fmcclurg $
-	 * $Date:: 2012-05-18 13:48:33 #$: Date of commit
-	 * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/searchDatabase.php $
+	 * $Date:: 2012-07-26 16:31:41 #$: Date of commit
+	 * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/searchDatabase.php $
 	 */
 
 	// Call the REDCap Connect file in the main "redcap" directory
@@ -36,7 +36,7 @@
 	   exit( $exitMessage );
 	}
 	
-	if ( isset( $_REQUEST['dblabel'] ) )
+	if ( strlen( $_REQUEST['dblabel'] ) > 0 )
 	{
 		// display one value and store another
 		$values = GetRedcapWildcardMultiValues( $dbFieldLabel,

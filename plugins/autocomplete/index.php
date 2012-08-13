@@ -3,11 +3,11 @@
     * @brief Performs autocompletion on an external REDCap project
     *
     * @file  jQueryDialogAutoComplete.php
-    * $Revision: 155 $
+    * $Revision: 159 $
     * $Author: fmcclurg $
-    * $Date:: 2012-07-03 16:35:06 #$
+    * $Date:: 2012-07-26 16:31:41 #$
     * @since 2012-05-14
-    * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/index.php $
+    * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/autocomplete-1.3/index.php $
     */
 
    // Call the REDCap Connect file in the main "redcap" directory
@@ -49,7 +49,8 @@
    $body = $_REQUEST['body'];
 
    $scriptName = sprintf( "%s/searchDatabase.php", $dirName );
-	$queryString = BuildQueryString( $_REQUEST );
+	// $queryString = BuildQueryString( $_REQUEST );
+	$queryString = $_SERVER['QUERY_STRING'];
    $searchScript = sprintf( "%s?%s", $scriptName, $queryString );
 ?>
 
