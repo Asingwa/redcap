@@ -3,9 +3,9 @@
     * @brief Wizard page that builds the custom autocomplete plugin code
     *
     * @file wizard.php
-    * $Revision: 164 $
+    * $Revision: 167 $
     * $Author: fmcclurg $
-    * $Date:: 2012-08-13 13:41:05 #$: Date of commit
+    * $Date:: 2012-08-15 13:49:39 #$: Date of commit
     * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/autocomplete/wizard.php $
     */
 
@@ -40,16 +40,12 @@
       <?php echo $title ?>
    </title>
 
-<?php
-   /*
    <!-- CSS Style Sheets -->
    <link href="jquery/css/smoothness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
 
    <!-- JavaScript Functions -->
    <script src="jquery/js/jquery-1.7.2.min.js" type="text/javascript" type="text/javascript"></script>
    <script src="jquery/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
-   */
-?>
 
    <style>
       td
@@ -70,16 +66,12 @@
       }
    </style>
 
-<?php
-   /*
    <script type="text/javascript">
-      $(document).ready(function()
+      function HighlightRow( idName )
       {
-         alert( 'jQuery installed' );
-      });
+         $( idName ).fadeTo(1000, 0.0).fadeTo(1000, 1.0);
+      }
    </script>
-   */
-?>
 </head>
 
 <body>
@@ -138,13 +130,20 @@
             ?>
          </td>
          <td>
-            The location of the autocomplete script on the server.
+            The location of the autocomplete script on the server
+            (not usually modified).
          </td>
       </tr>
 
-      <tr class="odd">
+      <tr class="grp2" style="background: #CEC3D5;">
+         <td colspan="4" style="text-align: center;">
+            Source Database Fields
+         </td>
+      </tr>
+      
+      <tr class="odd" id="sourceDatabaseProject">
          <td class="rprt tablePrompt">
-            Database Project (Source):
+            Source Database Project:
          </td>
          <td>
             <?php
@@ -165,9 +164,9 @@
          </td>
       </tr>
 
-      <tr class="even">
+      <tr class="even" id="sourceDBFieldReturned">
          <td class="rprt tablePrompt">
-            DB Field Returned (Source):
+            Source DB Field Returned:
          </td>
          <td>
             <?php
@@ -182,20 +181,39 @@
             ?>
          </td>
          <td>
-            The variable name of the source database text field 
-            that will be used to populate the REDCap target project 
-            field.&nbsp; This field contains all the possible values 
-            that could be selected for insertion into the target 
-            project field.&nbsp; When the field "DB Field Label" 
-            (below) is <em><strong>not specified</strong></em>, this 
-            field will also serve as the label for the autocompletion 
-            list items.
+            The name of the source database text field 
+            that will be used to populate the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#targetProjectField');">Target Project Field</a>
+                
+            (below).&nbsp; This field contains all the possible values 
+            that could be selected for insertion into the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#targetProjectField');">Target Project Field</a>.&nbsp;
+                
+            This field will also serve as the label 
+            for the autocompletion list items when the field 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#sourceDBFieldLabel');">Source DB Field Label</a>
+                
+            (below) is <em><strong>not specified</strong></em>.&nbsp; 
+            This field is completely dependant upon the 
+            current selection of the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#sourceDatabaseProject');">Source Database Project</a>
+                
+            (above).
          </td>
       </tr>
 
-      <tr class="odd">
+      <tr class="odd" id="sourceDBFieldLabel">
          <td class="rprt tablePrompt">
-            DB Field Label, if different from field returned (Source):
+            Source DB Field Label 
+            (if different from the Source DB Field Returned):
          </td>
          <td>
             <?php
@@ -214,18 +232,36 @@
             autocompletion match against one database field (e.g. 
             Physician's Name) and the value that is stored in the 
             project comes from a different database field (e.g. 
-            Physician's ID).&nbsp;  By specifying the "DB Field 
-            Label", you are able to select a physician's name and 
+            Physician's ID).&nbsp;  By specifying a value for this field,
+            you are able to select a physician's name and 
             their corresponding ID will be entered into your 
-            project.&nbsp; The "DB Field Label" 
+            project.&nbsp; This field
             <strong><em>must be</em></strong> used in conjunction 
-            with the "DB Field Returned" field (above).
+            with the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#sourceDBFieldReturned');">Source DB Field Returned</a>
+                
+            (above).&nbsp;
+            This field is also completely dependant upon the current 
+            selection of the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#sourceDatabaseProject');">Source Database Project</a>
+                
+            (above).
          </td>
       </tr>
 
-      <tr class="even">
+      <tr class="grp2" style="background: #CEC3D5;">
+         <td colspan="4" style="text-align: center;">
+            Target Project Fields
+         </td>
+      </tr>
+      
+      <tr class="even" id="targetProjectName">
          <td class="rprt tablePrompt">
-            Project Name (Target):
+            Target Project Name:
          </td>
          <td>
             <?php
@@ -246,9 +282,9 @@
          </td>
       </tr>
 
-      <tr class="odd">
+      <tr class="odd" id="targetProjectField">
          <td class="rprt tablePrompt">
-            Project Field (Target):
+            Target Project Field:
          </td>
          <td>
             <?php
@@ -264,10 +300,23 @@
          </td>
          <td>
             The variable name of the target project text field that will
-            receive the autocompletion value.
+            receive the autocompletion value.&nbsp;
+            This field is completely dependant upon the 
+            current selection of the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#targetProjectName');">Target Project Name</a>.&nbsp;
+                
+            (above).
          </td>
       </tr>
 
+      <tr class="grp2" style="background: #CEC3D5;">
+         <td colspan="4" style="text-align: center;">
+            Dialog Annotation
+         </td>
+      </tr>
+      
       <tr class="even">
          <td class="rprt tablePrompt">
             Dialog Title:
@@ -318,7 +367,13 @@
          </td>
       </tr>
 
-      <tr class="odd">
+      <tr class="grp2" style="background: #CEC3D5;">
+         <td colspan="4" style="text-align: center;">
+            Link Annotation
+         </td>
+      </tr>
+      
+      <tr class="even">
          <td class="rprt tablePrompt">
             Field Note Text:
          </td>
@@ -389,14 +444,14 @@
             ?>
          </td>
          <td>
-            The pop-up help displayed upon hover of the hypertext 
-            link.
+            The pop-up help displayed upon hover of the hypertext link
+            (browser dependant).
          </td>
       </tr>
 
-      <tr class="even">
+      <tr class="odd" id="iconType">
          <td class="rprt tablePrompt">
-            Hypertext Icon:
+            Hypertext Icon Type:
          </td>
          <td>
             <?php
@@ -421,11 +476,17 @@
             ?>
          </td>
          <td>
-            The icon of the hypertext link.
+            The icon type of the hypertext link.&nbsp; If this option 
+            is used, the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#iconSize');">Icon Size</a>
+                
+            (below) must also be specified.
          </td>
       </tr>
 
-      <tr class="even">
+      <tr class="even" id="iconSize">
          <td class="rprt tablePrompt">
             Hypertext Icon Size:
          </td>
@@ -445,7 +506,13 @@
             ?>
          </td>
          <td>
-            The size of the hypertext link icon.
+            The size of the hypertext link icon.&nbsp; If this option
+            is used, the 
+            
+            <a href="javascript:void(0);" 
+                onclick="HighlightRow('#iconType');">Icon Type</a>
+                
+            (above) must also be specified.
          </td>
       </tr>
 
@@ -469,7 +536,7 @@
            strlen( $_REQUEST['size'] ) )  // image specified
       {
          $imageStr = sprintf( "<img src=\"%s/images/%s/%s\"
-           border=\"0\" />",
+      border=\"0\" />",
               dirname( $_REQUEST['script'] ),
               $_REQUEST['size'],
               $_REQUEST['icon'] );
@@ -482,16 +549,17 @@
          $dblabelKeyValue = sprintf( "&dblabel=%d", $_REQUEST['dblabel'] );
       }
       
-      $htmlStr = sprintf(
-"<input style=\"text\" name=\"%s\" /> <br />
+      $textStr = sprintf(
+"<input style=\"text\" name=\"%s\" /> <br />", 
+              $_REQUEST['pfield'] );
 
-<div id=\"%s\"
-     style=\"display: none;\"></div>
+      $htmlStr = sprintf(
+"<div  id=\"%s\"
+      style=\"display: none;\"></div>
 
    %s<a href=\"javascript:void(0)\"
       title=\"%s\"
       onclick=\"javascript:$('#%s').load('%s?dbfield=%s&dblabel=%s&title=%s&body=%s&dbid=%d&pfield=%s&pid=%d');\">%s%s</a>",
-              $_REQUEST['pfield'],
               $_REQUEST['pfield'],
               $_REQUEST['fieldNote'],
               $_REQUEST['hoverText'],
@@ -525,16 +593,17 @@
 
       <tr class="odd">
          <td class="rprt tablePrompt">
-            Example:
+            Autocomplete Preview:
          </td>
          <td>
+            <?php echo $textStr ?>
             <?php echo $htmlStr ?>
          </td>
       </tr>
 
       <tr class="even">
          <td class="rprt tablePrompt">
-            Code:
+            Copy and Paste Code:
          </td>
          <td>
             <textarea name="body"
