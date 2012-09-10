@@ -9,7 +9,7 @@
  * @author Fred R. McClurg, University of Iowa
  * $Date:: 2012-03-13 14:52:03 #$
  * @since 2011-12-27
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/lib/debugUtilities.php $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/lib/debugUtilities.php $
  */
 
 	/**

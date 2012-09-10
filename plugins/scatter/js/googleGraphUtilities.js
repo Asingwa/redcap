@@ -4,7 +4,7 @@
  * @file googleGraphUtilties.js
  * $Revision: 91 $
  * $Date:: 2012-03-03 16:47:53 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/js/googleGraphUtilities.js $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/js/googleGraphUtilities.js $
  * 
  * @author Riccardo Govoni
  * @see http://www.battlehorse.net/page/topics/charts/save_google_charts_as_image.html

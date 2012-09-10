@@ -8,7 +8,7 @@
  * $Author: fmcclurg $
  * @author Fred R. McClurg, University of Iowa
  * $Date:: 2012-03-13 14:52:03 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/lib/redcapUtilities.php $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/lib/redcapUtilities.php $
  */
 
 

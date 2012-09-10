@@ -9,7 +9,7 @@
  * @author Fred R. McClurg, University of Iowa
  * $Date:: 2012-03-13 14:52:03 #$
  * @see http://rosettacode.org/wiki/Averages/Median#PHP
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/lib/mathUtilities.php $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/lib/mathUtilities.php $
  */
 
 /**

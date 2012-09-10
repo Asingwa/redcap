@@ -7,7 +7,7 @@
  * $Author: fmcclurg $
  * @author Fred R. McClurg, University of Iowa
  * $Date:: 2012-03-13 14:52:03 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/js/javaScriptUtilities.js $
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/js/javaScriptUtilities.js $
  */
 
 

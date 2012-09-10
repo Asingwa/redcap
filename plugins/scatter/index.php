@@ -4,12 +4,12 @@
  *
  * @file index.php
  * @version 1.0
- * $Revision: 99 $
+ * $Revision: 176 $
  * $Author: fmcclurg $
  * @author Fred R. McClurg, University of Iowa
- * $Date:: 2012-03-13 14:52:03 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/index.php $
- * @ref $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/index.php $
+ * $Date:: 2012-09-10 14:25:01 #$: Date of last commit
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/index.php $
+ * @ref $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/index.php $
  */
 
 # Display verbose error reporting
@@ -69,8 +69,8 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
    function drawChart() 
    {
       // var jasonUrl = 'generateJSONTestData.php';
-      // var jasonUrl = 'generateJSON.php?pid=<?= $_REQUEST["pid"] ?>&x_axis=<?= $_REQUEST["x_axis"] ?>&y_axis=<?= $_REQUEST["y_axis"] ?>';
-      var jasonUrl = 'generateJSON.php?<?= BuildQueryString( array( "pid", "x_axis", "y_axis" ) ); ?>';
+      // var jasonUrl = 'generateJSON.php?pid=<?php echo $_REQUEST["pid"] ?>&x_axis=<?php echo $_REQUEST["x_axis"] ?>&y_axis=<?php echo $_REQUEST["y_axis"] ?>';
+      var jasonUrl = 'generateJSON.php?<?php echo BuildQueryString( array( "pid", "x_axis", "y_axis" ) ); ?>';
       jasonUrl = jasonUrl.replace( /&/g, itoa( 38 ) );  // revert auto conversion
       
       // alert( "jasonUrl: " + jasonUrl );
@@ -87,7 +87,7 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
       
       // popup balloon label
       // data.addColumn('number', 'X');
-      // data.addColumn('number', '<?= $_REQUEST["x_axis"] ?> / <?= $_REQUEST["y_axis"] ?>');  // popup balloon label
+      // data.addColumn('number', '<?php echo $_REQUEST["x_axis"] ?> / <?php echo $_REQUEST["y_axis"] ?>');  // popup balloon label
    
       // for (var i = 0; i < 10; ++i) 
       // {
@@ -100,12 +100,12 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
       var chart = new google.visualization.ScatterChart(document.getElementById('plotBuilder'));
       var options = 
          {
-            title: '<?= $_REQUEST["plot_title"] ?>',
-            hAxis: {title: '<?= $_REQUEST["x_label"] ?>'}, 
-            vAxis: {title: '<?= $_REQUEST["y_label"] ?>'}, 
+            title: '<?php echo $_REQUEST["plot_title"] ?>',
+            hAxis: {title: '<?php echo $_REQUEST["x_label"] ?>'}, 
+            vAxis: {title: '<?php echo $_REQUEST["y_label"] ?>'}, 
             legend: 'none', 
-            width: <?= $_REQUEST["width"] ?>, 
-            height: <?= $_REQUEST["height"] ?>, 
+            width: <?php echo $_REQUEST["width"] ?>, 
+            height: <?php echo $_REQUEST["height"] ?>, 
          };
       
       chart.draw(data, options);
@@ -209,7 +209,7 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 	}
 ?>
 <!DOCTYPE script PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
 
 <table cellspacing="0" align="center">
    <tr>
@@ -219,7 +219,7 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
                <th class="fieldHeader">Plot Title:</th>
                <td colspan="3">
                   <input type="text" name="plot_title" size="30" 
-                         value="<?= $_REQUEST['plot_title'] ?>" />
+                         value="<?php echo $_REQUEST['plot_title'] ?>" />
                </td>
             </tr>
 
@@ -227,13 +227,13 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
                <th class="fieldHeader">X Label:</th>
                <td class="grp2">
                   <input type="text" name="x_label" size="10" 
-                         value="<?= $_REQUEST['x_label'] ?>" />
+                         value="<?php echo $_REQUEST['x_label'] ?>" />
                </td>
                
                <th class="fieldHeader">Y Label:</th>
                <td>
                   <input type="text" name="y_label" size="10" 
-                         value="<?= $_REQUEST['y_label'] ?>" />
+                         value="<?php echo $_REQUEST['y_label'] ?>" />
                </td>
             </tr>
 
@@ -241,27 +241,27 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
                <th class="fieldHeader">Width:</th>
                <td class="grp2">
                   <input type="text" name="width" size="2" 
-                         value="<?= SetStickeyValue( 'width', 600); ?>" />
+                         value="<?php echo SetStickeyValue( 'width', 600); ?>" />
                </td>
                
                <th class="fieldHeader">Height:</th>
                <td>
                   <input type="text" name="height" size="2" 
-                         value="<?= SetStickeyValue('height', 400); ?>" />
+                         value="<?php echo SetStickeyValue('height', 400); ?>" />
                </td>
             </tr>
 
             <tr class="even">
                <th class="fieldHeader">X Axis:</th>
                <td colspan="3">
-                  <?= BuildDropDownList( "x_axis", $variableHash ); ?>
+                  <?php echo BuildDropDownList( "x_axis", $variableHash ); ?>
                </td>
             </tr>
 
             <tr class="odd">
                <th class="fieldHeader">Y Axis:</th>
                <td colspan="3">
-                  <?= BuildDropDownList( "y_axis", $variableHash ); ?>
+                  <?php echo BuildDropDownList( "y_axis", $variableHash ); ?>
                </td>
             </tr>
 
@@ -293,7 +293,7 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 </table>
 
    <!-- remember current project upon next submission -->
-   <input type="hidden" name="pid" value="<?= $_REQUEST['pid'] ?>" />
+   <input type="hidden" name="pid" value="<?php echo $_REQUEST['pid'] ?>" />
 </form>
 
 <?php

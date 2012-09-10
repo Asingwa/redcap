@@ -8,7 +8,7 @@
  * @author $Author:: fmcclurg         $: Author of commit
  * @author Fred R. McClurg, University of Iowa
  * @date $Date:: 2012-03-13 14:52:03 #$: Date of commit
- * @ref $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/lib/errorReporting.php $
+ * @ref $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/lib/errorReporting.php $
  */
 
 	// Turn off all error reporting

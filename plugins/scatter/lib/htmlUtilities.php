@@ -4,11 +4,11 @@
  *
  * @file htmlUtilities.php
  * @version 1.0
- * $Revision: 99 $
+ * $Revision: 176 $
  * $Author: fmcclurg $
  * @author Fred R. McClurg, University of Iowa
- * $Date:: 2012-03-13 14:52:03 #$: Date of last commit
- * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/plots/lib/htmlUtilities.php $
+ * $Date:: 2012-09-10 14:25:01 #$: Date of last commit
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/trunk/scatter/lib/htmlUtilities.php $
  */
 
 
@@ -57,7 +57,7 @@ function BuildDropDownList( $listName, $dropdownHash )
  * @code 
  * <input type="text" 
  *        name="title" 
- *        value="<?= SetStickeyValue( 'title', 'Default Title Here' ); ?>"
+ *        value="<?php echo SetStickeyValue( 'title', 'Default Title Here' ); ?>"
  * @endcode
  * 
  * @param   $requestKey    Name of the text control

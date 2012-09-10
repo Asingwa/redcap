@@ -1,0 +1,16 @@
+Title:         REDCap scatter plot plugin
+
+Description:   A REDCap plugin that generates a scatter plot of two 
+               fields that possess integer or floating point validation.
+               
+Campus:        University of Iowa
+
+Department:    Institute for Clinical and Translational Sciences (ICTS)
+
+Contacts:      Fred McClurg
+               Heath Davis
+
+Version:       1.1
+
+Documentation: https://www.icts.uiowa.edu/confluence/display/ICTSit/REDCap+Scatter+Plot+Plugin
+Usage:         https://redcap.universityNameHere.edu/scatter/index.php?pid=projectPidHere
