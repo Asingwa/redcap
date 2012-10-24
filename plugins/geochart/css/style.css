@@ -1,0 +1,88 @@
+/**
+ * @brief Basic settings for index page
+ *
+ * @file style.css
+ * @version 1.0
+ * $Revision: 196 $
+ * $Author: fmcclurg $
+ * @author Fred R. McClurg, University of Iowa
+ * $Date:: 2012-10-11 10:56:54 #$: Date of last commit
+ * $URL: https://srcvault.icts.uiowa.edu/repos/REDCap/REDCap/tags/geochart-1.0/css/style.css $
+ */
+
+table.plotTable
+{
+   /* width: 100%; */
+   text-align: center;
+   padding: 5;
+}
+
+th.fieldHeader
+{
+   text-align: right;
+   font-weight: bold;
+   white-space: nowrap;
+}
+
+input.buttonClass, button.buttonClass
+{
+   padding: 5px;
+   spacing: 10px;
+   font-weight: bold;
+}
+
+/* change cursor to finger pointer upon hover over geochart marker */
+#markersMapDiv circle
+{
+   cursor: pointer;
+}
+
+/* change cursor to finger pointer upon hover over geochart marker */
+#tabs th,td
+{
+   padding: 5px;
+   /* border-spacing: 5px 5px; */
+   /* border-collapse: separate; */
+}
+
+legend
+{
+   text-align: center;
+   font-weight: bold;
+   font-size: 125%;
+   background-color: #FDFEF5;
+   padding: 3px;
+}
+
+fieldset
+{
+   background-color: #FDFEF5;
+}
+
+h1
+{
+   color: #800000;
+   text-align: center;
+   font-size: 150%;
+}
+
+/* modify the existing REDCap style */
+tr.odd td
+{
+   border-right: none;
+}
+
+/*
+body
+{
+   font-size: 100%;
+   font-family: verdana,arial,sans-serif;
+}
+*/
+
+/*
+p
+{
+   font-size: 0.875em;
+}
+*/

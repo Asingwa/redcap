@@ -1,0 +1,16 @@
+Title:         REDCap geochart plugin
+
+Description:   A REDCap plugin that generates a google geochart based on
+               the data from several fields in a REDCap project
+
+Campus:        University of Iowa
+
+Department:    Institute for Clinical and Translational Sciences (ICTS)
+
+Contacts:      Fred McClurg
+               Heath Davis
+
+Version:       1.0
+
+Documentation: https://www.icts.uiowa.edu/confluence/display/ICTSit/REDCap+Geochart+Plugin
+Usage:         https://redcap.universityNameHere.edu/geochart/index.php?pid=projectPidHere
